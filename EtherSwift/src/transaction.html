@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>EtherSwift</title>
+  <link rel="icon" type="image/png" href="EtherSwift.ico">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main class="container-fluid">
+    <section>
+      <h2 class="section-title">Account Information</h2>
+      <div class="row">
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+          <p class="info-text alert alert-primary">Network: <span id="network"></span></p>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+          <p class="info-text alert alert-secondary">ChainId: <span id="chainId"></span></p>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+          <button class="btn btn-primary btn-lg btn-block mb-3" id="connectButton" disabled>Connect</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Contract Operations</h2>
+      <div class="row">
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
+          <div class="card full-width">
+            <div class="card-body">
+              <h4 class="card-title h4-align">Deploy Contract</h4>
+              <button class="btn btn-primary btn-lg btn-block mb-3" id="deployButton">Deploy Contract</button>
+              <h4 class="card-or h4-align">Or Use Previously Deployed</h4>
+              <input type="text" class="info-text full-width mb-3" id="deployedContractAddress" placeholder="Enter contract address">
+              <button class="btn btn-primary btn-lg btn-block mb-3" id="setContractButton">Set Contract Address</button>
+              <button class="btn btn-primary btn-lg btn-block mb-3" id="depositButton" disabled>Deposit</button>
+              <button class="btn btn-primary btn-lg btn-block mb-3" id="withdrawButton" disabled>Withdraw</button>
+              <p class="info-text alert alert-secondary">Contract Status: <span id="contractStatus">Not clicked</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="metamask-onboarding.bundle.js" defer></script>
+  <script src="bundle.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+package-lock.json
+node_modules
+backups
+.vscode
+dist
+.parcel-cache
+gh-pages-deploy.sh
